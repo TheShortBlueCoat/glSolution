@@ -5,8 +5,8 @@
 // global variables
 
 // Window size
-const unsigned int initWidth = 512;
-const unsigned int initHeight = 512;
+const unsigned int initWidth = 1536;
+const unsigned int initHeight = 1536;
 
 // Function prototypes
 void renderScene();
@@ -90,13 +90,80 @@ void renderScene()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	// Render objects here...
+	
+	/*
+	glBegin(GL_TRIANGLES);
+	glVertex2f(-0.5f, -0.5f);
+	glVertex2f(0.5f, 0.5f);
+	glVertex2f(0.5f, -0.5f);
+
+	glVertex2f(-0.5f, -0.5f);
+	glVertex2f(-0.5f, 0.5f);
+	glVertex2f(0.5f, 0.5f);
+	*/
+
+	///* Hexagon
+	glBegin(GL_TRIANGLES);
+	glVertex2f(-0.5f, -0.5f);
+	glVertex2f(0.5f, 0.5f);
+	glVertex2f(0.5f, -0.5f);
+
+	glVertex2f(-0.5f, -0.5f);
+	glVertex2f(-0.5f, 0.5f);
+	glVertex2f(0.5f, 0.5f);
+
+	glVertex2f(-0.5f, -0.5f);
+	glVertex2f(-0.5f, 0.5f);
+	glVertex2f(-1.5f, -0.5f);
+
+	glVertex2f(-0.5f, -0.5f);
+	glVertex2f(0.5f, 0.5f);
+	glVertex2f(1.5f, -0.5f);
+
+	glVertex2f(-0.5f, -0.5f);
+	glVertex2f(-0.5f, -1.5f);
+	glVertex2f(0.5f, -0.5f);
+
+	glVertex2f(-0.5f, -0.5f);
+	glVertex2f(0.5f, -1.5f);
+	glVertex2f(0.5f, 0.5f);
+
+	glVertex2f(-0.5f, -0.5f);
+	glVertex2f(-0.5f, -1.5f);
+	glVertex2f(1.5f, -0.5f);
+
+	glVertex2f(-0.5f, -0.5f);
+	glVertex2f(0.5f, -1.5f);
+	glVertex2f(-1.5f, -0.5f);
+	glEnd();
+	//*/ 
+	
+	/*
+	glBegin(GL_TRIANGLES);
+	glVertex2f(-0.5f, -0.5f);
+	glVertex2f(0.0f, 0.5f);
+	glVertex2f(0.5f, -0.5f);
+	glEnd();
+	*/
+
+	/*glBegin(GL_TRIANGLES);
+	glVertex2f(-0.5f, -0.5f);
+	glVertex2f(0.0f, 0.5f);
+	glVertex2f(0.5f, -0.5f);
+
+	glVertex2f(-0.5f, -0.5f);
+	glVertex2f(0.5f, 1.5f);
+	glVertex2f(-1.5f, -0.5f);
+	glEnd();*/
+
+	
 }
 
 
 // Function to call when window resized
 void resizeWindow(GLFWwindow* window, int width, int height)
 {
-	glViewport(0, 0, width, height);		// Draw into entire window
+	glViewport(1, 250, width, height);		// Draw into entire window
 }
 
 
